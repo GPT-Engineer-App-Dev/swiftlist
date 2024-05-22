@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Container, VStack, HStack, Input, Button, Checkbox, Text, IconButton, Box } from "@chakra-ui/react";
 import { FaTrash } from "react-icons/fa";
 
@@ -27,6 +28,9 @@ const Index = () => {
 
   return (
     <Container centerContent maxW="container.md" py={10}>
+      <Box as="nav" width="100%" py={4} textAlign="center" borderBottom="1px" borderColor="gray.200">
+        <Link to="/">Home</Link> | <Link to="/about">About</Link>
+      </Box>
       <VStack spacing={4} width="100%">
         <Text fontSize="3xl" fontWeight="bold">Todo App</Text>
         <HStack width="100%">
